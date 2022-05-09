@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>ROFL-SHOP</title>
+{% endblock %}
+
+{% block body %}
+<body class="text-center" _c_t_common="1" _c_t_j1="1">
+    <h1 class="h3 mb-3 font-weight-normal">Добавить рофлянчик</h1>
+    <form method="post">
+    <label for="login" class="sr-only">Название рофлянчика</label>
+    <input type="text" class="form-control" name="name" id="name" placeholder="Введите название рофлянчика" required="">
+    <label for="inputPassword" class="sr-only">Цена рофлянчика</label>
+    <input type="number" name="price" id="price" class="form-control" placeholder="Введите цену рофлянчика" required="">
+    <label for="inputPassword" class="sr-only">URL рофлянчика</label>
+    <input type="text" name="url" id="url" class="form-control" placeholder="Введите ссылочку" required="">
+        <h1> </h1>
+        <h1> </h1>
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Добавить рофлянчик</button>
+    <p class="mt-5 mb-3 text-muted">© 2017-2018</p>
+</form>
+
+
+<div class="mallbery-caa" style="z-index: 2147483647 !important; text-transform: none !important; position: fixed;">
+
+</div>
+</body>
+{% endblock %}

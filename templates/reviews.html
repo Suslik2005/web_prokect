@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block body %}
+<body class="text-center" _c_t_common="1" _c_t_j1="1">
+<form method="post">
+  <h1 class="h3 mb-3 font-weight-normal">Наши отзывы:</h1>
+  <label for="username" class="sr-only">user_name</label>
+    <input type="text" class="form-control" name="username" id="username" placeholder="Введите user_name">
+    <label for="comment" class="sr-only">comment</label>
+    <input type="text" name="comment" id="comment" class="form-control" placeholder="Введите comment" required=""><br>
+  <button class="btn btn-lg btn-primary btn-block" type="submit">add comment</button>
+</form>
+
+
+{% for el in data %}
+<br><a href="#" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+    <img src="/static/img/nurz.jpg" alt="twbs" width="32" height="32" class="rounded-circle flex-shrink-0">
+    <div class="d-flex gap-2 w-100 justify-content-between">
+      <div>
+        <h6 class="mb-0">{{ el.user_name }}</h6>
+        <p class="mb-0 opacity-75">{{ el.review }}</p>
+      </div>
+      <small class="opacity-50 text-nowrap">{{ el.date }}</small>
+    </div>
+  </a><br>
+{% endfor %}
+<div class="mallbery-caa" style="z-index: 2147483647 !important; text-transform: none !important; position: fixed;">
+</div>
+</body>
+{% endblock %}

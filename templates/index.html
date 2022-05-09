@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>ROFL-SHOP</title>
+{% endblock %}
+
+{% block body %}
+<h1 class="display-4 fw-normal">Магазин рофлянских угарчиков</h1>
+{% endblock %}
+
+{% block items %}
+<div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+    {% for el in data %}
+    <form method="post">
+    <div class="col">
+        <div class="card mb-4 rounded-3 shadow-sm">
+            <div class="card-header py-3">
+                <h4 class="my-0 fw-normal">{{el.price}}  ₽</h4>
+            </div>
+            <div class="card-body">
+                <h1 class="card-title pricing-card-title">{{el.title}}<small class="text-mutreviewed fw-light"></small></h1>
+                <p>
+                    <img src={{el.url}},
+                                 alt="упс">
+                </p>
+                <button class="btn btn-lg btn-primary btn-block" id="btn" name="btn" value="{{el.title,el.price,el.url,el.id}}" type="submit">Купить</button>
+            </div>
+        </div>
+    </div>
+    </form>
+    {% endfor %}
+</div>
+<h2 class="display-6 text-center mb-4">Compare plans</h2>
+{% endblock %}
